@@ -27,7 +27,7 @@ public class OpenWeatherMapUtils {
     /*
      * Set your own APPID here.
      */
-    private final static String OWM_FORECAST_APPID = "00f212cd2ae8424466d2f31d0a880f97";
+    private final static String OWM_FORECAST_APPID = "818b96dea51c686837052ec0b1e59ecb";
 
     /*
      * The below several classes are used only for JSON parsing with Gson.
