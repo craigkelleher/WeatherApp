@@ -1,6 +1,6 @@
 # Assignment 3
-**Due by 11:59pm on Monday, 2/24/2020** <br />
-**Demo due by 11:59pm on Monday, 3/9/2020**
+**Due by 11:59pm on Monday, 2/24/2021** <br />
+**Demo due by 11:59pm on Monday, 3/8/2021**
 
 In this assignment, we'll adapt our weather app to gracefully deal with transitions in the activity lifecycle by implementing the `ViewModel` architecture.  You'll also add some basic user preferences to the app.
 
