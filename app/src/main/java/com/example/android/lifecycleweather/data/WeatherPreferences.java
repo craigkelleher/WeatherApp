@@ -8,11 +8,9 @@ public class WeatherPreferences {
     public static String getDefaultForecastLocation() {
         return DEFAULT_FORECAST_LOCATION;
     }
-
     public static String getDefaultTemperatureUnits() {
         return DEFAULT_TEMPERATURE_UNITS;
     }
-
     public static String getDefaultTemperatureUnitsAbbr() {
         return DEFAULT_TEMPERATURE_UNITS_ABBR;
     }

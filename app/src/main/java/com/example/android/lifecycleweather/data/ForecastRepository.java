@@ -17,14 +17,11 @@ public class ForecastRepository implements ForecastAsyncTask.Callback {
     private String mCurrentQuery;
     private String mCurrentUnits;
 
-
     public ForecastRepository() {
         mForecastResults = new MutableLiveData<>();
         mForecastResults.setValue(null);
-
         mLoadingStatus = new MutableLiveData<>();
         mLoadingStatus.setValue(Status.SUCCESS);
-
         mCurrentQuery = null;
     }
 
@@ -33,8 +30,7 @@ public class ForecastRepository implements ForecastAsyncTask.Callback {
     }
 
     private boolean shouldExecuteSearch(String query, String tempUnits) {
-        return !TextUtils.equals(query, mCurrentQuery)
-                || !TextUtils.equals(tempUnits, mCurrentUnits);
+        return !TextUtils.equals(query, mCurrentQuery) || !TextUtils.equals(tempUnits, mCurrentUnits);
     }
 
     public void loadForecastResults(String query, String tempUnits) {
