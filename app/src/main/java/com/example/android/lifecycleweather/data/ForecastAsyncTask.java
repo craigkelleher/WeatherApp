@@ -10,7 +10,6 @@ import java.util.List;
 
 public class ForecastAsyncTask extends AsyncTask<String, Void, String> {
     private Callback mCallback;
-
     public interface Callback {
         void onResultsFinished(List<ForecastItem> forecastResults);
     }

@@ -3,9 +3,6 @@ package com.example.android.lifecycleweather.data;
 import java.io.Serializable;
 import java.util.Date;
 
-/*
- * This class is used as a final representation of a single forecast item.
- */
 public class ForecastData implements Serializable {
     public Date dateTime;
     public String description;
