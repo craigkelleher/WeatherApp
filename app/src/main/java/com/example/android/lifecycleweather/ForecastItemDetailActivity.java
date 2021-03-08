@@ -1,7 +1,7 @@
 package com.example.android.lifecycleweather;
 
 import android.content.Intent;
-import androidx.core.app.ShareCompat;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
@@ -27,20 +27,20 @@ public class ForecastItemDetailActivity extends AppCompatActivity {
     private TextView mWindTV;
     private TextView mHumidityTV;
     private ImageView mWeatherIconIV;
-
     private ForecastItem mForecastItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast_item_detail);
-
-        mDateTV = findViewById(R.id.tv_date);
-        mTempDescriptionTV = findViewById(R.id.tv_temp_description);
-        mLowHighTempTV = findViewById(R.id.tv_low_high_temp);
-        mWindTV = findViewById(R.id.tv_wind);
-        mHumidityTV = findViewById(R.id.tv_humidity);
-        mWeatherIconIV = findViewById(R.id.iv_weather_icon);
+        mDateTV = findViewById(R.id.dateTextView);
+        mTempDescriptionTV = findViewById(R.id.descriptionTextView);
+        mLowHighTempTV = findViewById(R.id.lowHighTemptTextView);
+        mWindTV = findViewById(R.id.windTextView);
+        mHumidityTV = findViewById(R.id.popTV);
+        TextView cloudTV = findViewById(R.id.cloudinessTextView);
+        //cloudTV.setText(ForecastItemDetailActivity.getCloudiness() + "% cloudiness");
+        mWeatherIconIV = findViewById(R.id.weatherTextView);
 
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra(OpenWeatherMapUtils.EXTRA_FORECAST_ITEM)) {

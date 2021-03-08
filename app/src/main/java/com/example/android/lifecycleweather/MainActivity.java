@@ -30,15 +30,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ForecastAdapter.OnForecastItemClickListener {
-
     private static final String TAG = MainActivity.class.getSimpleName();
+    //private static final String OPENWEATHER_APPID = BuildConfig.OPENWEATHER_API_KEY;
 
     private TextView mForecastLocationTV;
     private RecyclerView mForecastItemsRV;
     private ProgressBar mLoadingIndicatorPB;
     private TextView mLoadingErrorMessageTV;
     private ForecastAdapter mForecastAdapter;
-
     private ForecastViewModel mViewModel;
 
     @Override
@@ -56,18 +55,15 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapter.O
 
         mForecastLocationTV = findViewById(R.id.tv_forecast_location);
         mForecastLocationTV.setText(location);
-
         mLoadingIndicatorPB = findViewById(R.id.pb_loading_indicator);
         mLoadingErrorMessageTV = findViewById(R.id.tv_loading_error_message);
         mForecastItemsRV = findViewById(R.id.rv_forecast_items);
-
         mForecastAdapter = new ForecastAdapter(this);
         mForecastItemsRV.setAdapter(mForecastAdapter);
         mForecastItemsRV.setLayoutManager(new LinearLayoutManager(this));
         mForecastItemsRV.setHasFixedSize(true);
 
         mViewModel = new ViewModelProvider(this).get(ForecastViewModel.class);
-
         mViewModel.getForecastResults().observe(this, new Observer<List<ForecastItem>>() {
             @Override
             public void onChanged(List<ForecastItem> forecastItems) {
@@ -132,7 +128,6 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapter.O
                 getString(R.string.pref_temp_key),
                 getString(R.string.pref_temp_default)
         );
-
         mViewModel.loadForecastResults(location, temp);
     }
 
@@ -163,7 +158,6 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapter.O
                 getString(R.string.pref_temp_key),
                 getString(R.string.pref_temp_default)
         );
-
         mForecastLocationTV.setText(location);
         mViewModel.loadForecastResults(location, temp);
     }

@@ -6,11 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
-<!--        <item name="preferenceTheme">-->
-<!--            @style/PreferenceThemeOverlay.v14.Material-->
-<!--        </item>-->
     </style>
-
-
+    <style name="TextAppearance.CS492Weather.HighTemp" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">#F44336</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="TextAppearance.CS492Weather.LowTemp" parent="TextAppearance.CS492Weather.HighTemp">
+        <item name="android:textColor">#03A9F4</item>
+    </style>
 </resources>

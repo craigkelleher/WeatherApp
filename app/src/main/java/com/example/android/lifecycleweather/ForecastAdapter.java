@@ -13,7 +13,6 @@ import com.example.android.lifecycleweather.data.WeatherPreferences;
 import com.example.android.lifecycleweather.utils.OpenWeatherMapUtils;
 
 import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastItemViewHolder> {
@@ -64,7 +63,7 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
             super(itemView);
             mForecastDateTV = itemView.findViewById(R.id.tv_forecast_date);
             mForecastTempDescriptionTV = itemView.findViewById(R.id.tv_forecast_temp_description);
-            mWeatherIconIV = itemView.findViewById(R.id.iv_weather_icon);
+            mWeatherIconIV = itemView.findViewById(R.id.weatherTextView);
             itemView.setOnClickListener(this);
         }
 

@@ -27,7 +27,6 @@ public class ForecastViewModel extends ViewModel {
     public LiveData<List<ForecastItem>> getForecastResults() {
         return mSearchResults;
     }
-
     public LiveData<Status> getLoadingStatus() {
         return mLoadingStatus;
     }
