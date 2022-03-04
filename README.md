@@ -32,7 +32,7 @@ The preferences screen should allow the user to set the following preferences:
 
   * **Weather units** - The user should be allowed to select between "Imperial", "Metric", and "Kelvin" temperature units.  The currently-selected value should be displayed as the summary for the preference.  See the OpenWeatherMap API documentation here for more info on how this preference value will be used to formulate API requests: https://openweathermap.org/forecast5#data.
 
-  * **Weather location** - The user should be allowed to enter an arbitrary location for which to fetch a forecast.  The currently-set value should be set as the summary for the preference.  You can specify any default location you'd like.  See the OpenWeatherMap API documentation here for more info on how this preference value will be used to formulate API requests: https://openweathermap.org/forecast5#name5.
+  * **Weather location** - The user should be allowed to enter an arbitrary location for which to fetch a forecast.  The currently-set value should be set as the summary for the preference.  You can specify any default location you'd like. See the OpenWeatherMap API documentation here for more info on how this preference value will be used to formulate API requests: https://openweathermap.org/forecast5#name5.
 
 The settings of these preferences should affect the URL used to query the OpenWeatherMap API.  The app should be hooked up so that any change to the preferences results in the OpenWeatherMap API being re-queried and the new results being displayed.  Importantly, there are a couple places in the UI and elsewhere that will also need to be updated in response to a change in preferences:
   * The weather location displayed at the top of the main activity.
